@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
-public class todo {
+public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false)
@@ -38,7 +38,7 @@ public class todo {
     private LocalDateTime updatedAt;
 
     @Builder
-    public todo(String title, String content){
+    public Todo(String title, String content){
         this.title = title;
         this.content = content;
     }
